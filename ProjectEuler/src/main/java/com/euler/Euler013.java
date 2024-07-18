@@ -9,18 +9,19 @@ import java.nio.file.Paths;
 
 import com.euler.common.Timing;
 
-public class Euler13 {
-	private static String solve()	{
-		try	{
-			URL resource=Euler11.class.getResource("in13.txt");
-			BigInteger sum=Files.lines(Paths.get(resource.toURI())).map(BigInteger::new).reduce(BigInteger::add).get();
-			return sum.toString().substring(0,10);
-		}	catch (IOException|URISyntaxException exc)	{
+public class Euler013 {
+	private static String solve() {
+		try {
+			URL resource = Euler011.class.getResource("in13.txt");
+			BigInteger sum = Files.lines(Paths.get(resource.toURI())).map(BigInteger::new).reduce(BigInteger::add)
+					.get();
+			return sum.toString().substring(0, 10);
+		} catch (IOException | URISyntaxException exc) {
 			throw new RuntimeException(exc);
 		}
 	}
 
-	public static void main(String[] args)	{
-		Timing.time(Euler13::solve);
+	public static void main(String[] args) {
+		Timing.time(Euler013::solve);
 	}
 }
